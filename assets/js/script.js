@@ -1,23 +1,39 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var buttonEl = document.getElementById('start-game');
-var testEl = document.getElementById('test')
 
 
+
+
+//Questions
 var questions = 
-'how long is your name? Do you believe that we will die someday';
+'What is a javascript data type?';
 
 var question = questions.split(' ');
 
 
+
+//Answers
+var answers = "Boolean"
+
+
+
+
+
+
+/// Check answers
+//var 
 
 
 
 //Timer function. 
 
 
+buttonEl.addEventListener("click",countdown);
+
+
 function countdown() {
-    var timeLeft = 30;
+    var timeLeft = 5;
 
 
     var timeInterval = setInterval(function () {
@@ -64,12 +80,7 @@ if (question[wordCount] === undefined) {
         }
 
     }, 1000);
+
+   
 }
 
-event.preventDefault();
-countdown();
-
-
-
-/////Question function 
-//if questions is displaying on the screen 
