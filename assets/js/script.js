@@ -2,20 +2,20 @@ var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var buttonEl = document.getElementById('start-game');
 var timeLeft = 5;
-
+var points = 0;
 
 
 //Questions
 var questions = 
 'What is a javascript data type?';
 
-var question = questions.split(' ');
+
+//Correct Answer
+
+var correctAnswer = document.getElementById('button4');
 
 
-
-
-
-
+////Main timer button function
 buttonEl.addEventListener("click",countdown);
 
 
@@ -54,7 +54,7 @@ function countdown() {
 
 
 //Answer Check
-
+//if ()
 
 
 
