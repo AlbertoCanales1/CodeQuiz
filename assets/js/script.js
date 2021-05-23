@@ -1,7 +1,7 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var buttonEl = document.getElementById('start-game');
-
+var timeLeft = 5;
 
 
 
@@ -13,28 +13,17 @@ var question = questions.split(' ');
 
 
 
-//Answers
-var answers = "Boolean"
 
-
-
-
-
-
-/// Check answers
-//var 
-
-
-
-//Timer function. 
 
 
 buttonEl.addEventListener("click",countdown);
 
 
 function countdown() {
-    var timeLeft = 5;
+    
 
+
+    document.getElementById("card1").style.visibility = "visible";
 
     var timeInterval = setInterval(function () {
 
@@ -48,7 +37,8 @@ function countdown() {
         timerEl.textContent = timeLeft + ' second remaining';
         timeLeft--;
         } else {
-          
+        alert("You lose")
+
         timerEl.textContent = '';
     
         clearInterval(timeInterval);
@@ -63,24 +53,34 @@ function countdown() {
 }
 
 
-function displayQuestions() {
-    var wordCount = 0;
+//Answer Check
 
-var msgInterval = setInterval(function () {
 
-if (question[wordCount] === undefined) {
 
-    clearInterval(msgInterval);
-} else {
 
-    mainEl.textContent = question[wordCount];
-    wordCount++;
+// if(timeLeft === 0){
+//     alert("You lose");
+// }
 
-    console.log();
-        }
 
-    }, 1000);
+// function displayQuestions() {
+//     var wordCount = 0;
+
+// var msgInterval = setInterval(function () {
+
+// if (question[wordCount] === undefined) {
+
+//     clearInterval(msgInterval);
+// } else {
+
+//     mainEl.textContent = question[wordCount];
+//     wordCount++;
+
+//     console.log();
+//         }
+
+//     }, 1000);
 
    
-}
+// }
 
